@@ -67,6 +67,12 @@ public class ArmorFunctions {
         boolean handle(ConArmTraitRepresentation thisTrait, IEnchantmentDefinition enchantmentDefinition);
     }
 
+    @ZenClass("mods.conarm.traits.CanApplyCustom")
+    @ZenRegister
+    public interface CanApplyCustom {
+        boolean handle(ConArmTraitRepresentation thisTrait, IItemStack stack);
+    }
+
     @ZenClass("mods.conarm.traits.ExtraInfo")
     @ZenRegister
     public interface ExtraInfo {

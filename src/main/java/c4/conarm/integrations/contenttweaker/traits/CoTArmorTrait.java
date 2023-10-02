@@ -26,6 +26,7 @@ import c4.conarm.lib.armor.ArmorModifications;
 import c4.conarm.lib.modifiers.ArmorModifierTrait;
 import c4.conarm.lib.traits.IArmorTrait;
 import c4.conarm.lib.utils.RecipeMatchHolder;
+import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import crafttweaker.mc1120.data.NBTConverter;
 import crafttweaker.mc1120.enchantments.MCEnchantmentDefinition;
@@ -65,6 +66,7 @@ public class CoTArmorTrait extends ArmorModifierTrait implements IArmorTrait {
     ArmorFunctions.OnArmorRepair onArmorRepair = null;
     ArmorFunctions.CanApplyTogetherTrait canApplyTogetherTrait = null;
     ArmorFunctions.CanApplyTogetherEnchantment canApplyTogetherEnchantment = null;
+    ArmorFunctions.CanApplyCustom canApplyCustom = null;
     ArmorFunctions.ExtraInfo extraInfo = null;
     ArmorFunctions.OnArmorTick onArmorTick = null;
     ArmorFunctions.GetModifications getModifications = null;
@@ -137,6 +139,14 @@ public class CoTArmorTrait extends ArmorModifierTrait implements IArmorTrait {
             return canApplyTogetherEnchantment.handle(thisTrait, new MCEnchantmentDefinition(enchantment));
         }
         return super.canApplyTogether(enchantment);
+    }
+
+    @Override
+    public boolean canApplyCustom(ItemStack stack) {
+        if (canApplyCustom != null) {
+            return canApplyCustom.handle(thisTrait, CraftTweakerMC.getIItemStack(stack));
+        }
+        return super.canApplyCustom(stack);
     }
 
     @Override
