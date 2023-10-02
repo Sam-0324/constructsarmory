@@ -43,8 +43,8 @@ import org.apache.logging.log4j.Logger;
 public class ConstructsArmory {
 
     public static final String MODID = "conarm";
-    public static final String MODNAME = "Construct's Armory";
-    public static final String MODVER = "1.2.5.10";
+    public static final String MODNAME = "Construct's Armory Unofficial";
+    public static final String MODVER = "1.2.6";
 
     private static final boolean DEBUG = false;
 

@@ -1,14 +1,14 @@
 [{
   "modid": "conarm",
-  "name": "Construct's Armory",
+  "name": "Construct's Armory Unofficial",
   "description": "A Tinkers' Construct add-on for those looking to enter the world of armor",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["C4"],
-  "credits": "",
-  "logoFile": "",
+  "authorList": ["C4","Sam_0324"],
+  "credits": "Textures&Original Code by TheIllusiveC4 (a.k.a. C4), improved by Sam_0324",
+  "logoFile": "assets/conarm/textures/items/book.png",
   "screenshots": [],
   "dependencies": []
 }]
