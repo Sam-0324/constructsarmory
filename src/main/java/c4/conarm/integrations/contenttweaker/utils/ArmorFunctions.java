@@ -20,23 +20,16 @@
 package c4.conarm.integrations.contenttweaker.utils;
 
 import c4.conarm.integrations.contenttweaker.traits.ConArmTraitRepresentation;
-import c4.conarm.lib.armor.ArmorModifications;
 import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.damage.IDamageSource;
 import crafttweaker.api.data.IData;
 import crafttweaker.api.enchantments.IEnchantmentDefinition;
 import crafttweaker.api.entity.IEntity;
 import crafttweaker.api.entity.IEntityItem;
-import crafttweaker.api.event.EntityLivingDamageEvent;
-import crafttweaker.api.event.EntityLivingFallEvent;
-import crafttweaker.api.event.EntityLivingHurtEvent;
-import crafttweaker.api.event.EntityLivingJumpEvent;
-import crafttweaker.api.event.LivingKnockBackEvent;
-import crafttweaker.api.event.PlayerPickupItemEvent;
+import crafttweaker.api.event.*;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.player.IPlayer;
 import crafttweaker.api.world.IWorld;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
 import slimeknights.tconstruct.library.modifiers.ModifierNBT;
 import stanhebben.zenscript.annotations.ZenClass;
