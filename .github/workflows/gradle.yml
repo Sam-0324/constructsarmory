@@ -29,3 +29,8 @@ jobs:
           echo "Build Start!!!"
           chmod +x gradlew
           ./gradlew build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ConstructsArmory-Unofficial
+        path: build/libs
