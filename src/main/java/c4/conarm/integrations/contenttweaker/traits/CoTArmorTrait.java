@@ -136,10 +136,9 @@ public class CoTArmorTrait extends ArmorModifierTrait implements IArmorTrait {
 
     @Override
     public boolean canApplyCustom(ItemStack stack) {
-        if (canApplyCustom != null) {
-            return canApplyCustom.handle(thisTrait, CraftTweakerMC.getIItemStack(stack));
-        }
-        return super.canApplyCustom(stack);
+        if(!super.canApplyCustom(stack)) return false; //[super]==false -> false
+        if (canApplyCustom == null) return true;//[self]==null && [super]==true -> true
+        return canApplyCustom.handle(thisTrait, CraftTweakerMC.getIItemStack(stack));
     }
 
     @Override
