@@ -94,6 +94,8 @@ public class CoTArmorTraitBuilder {
     @ZenProperty
     public ArmorFunctions.CanApplyTogetherEnchantment canApplyTogetherEnchantment = null;
     @ZenProperty
+    public ArmorFunctions.CanApplyCustom canApplyCustom = null;
+    @ZenProperty
     public ArmorFunctions.ExtraInfo extraInfo = null;
     @ZenProperty
     public String localizedName = null;
@@ -142,6 +144,7 @@ public class CoTArmorTraitBuilder {
         trait.onArmorHealed = this.onArmorHealed;
         trait.getAbilityLevel = this.getAbilityLevel;
         trait.hidden = this.hidden;
+        trait.canApplyCustom = this.canApplyCustom;
         trait.canApplyTogetherTrait = this.canApplyTogetherTrait;
         trait.canApplyTogetherEnchantment = this.canApplyTogetherEnchantment;
         trait.extraInfo = this.extraInfo;
